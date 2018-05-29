@@ -15,6 +15,7 @@ setup(
     url='https://github.com/rpkilby/AssetVendor',
     description='A simple dealer of node packages...',
     long_description=get_long_description(),
+    long_description_content_type='text/markdown',
     license='BSD',
     package_dir={'': 'src'},
     packages=find_packages('src'),
