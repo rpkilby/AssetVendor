@@ -17,7 +17,7 @@ Or more concretely, a python-based client and lockfile format for NPM.
 Asset Vendor requires Python 3.6 and later. To install, use pip or your preferred package manager:
 
 ```sh
-$ pip install assetvendor
+$ pip install AssetVendor
 ```
 
 

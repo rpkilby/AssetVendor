@@ -9,10 +9,10 @@ def get_long_description():
 
 
 setup(
-    name='assetvendor',
+    name='AssetVendor',
     version='0.0.0',
     author='Ryan P Kilby',
-    url='https://github.com/rpkilby/assetvendor',
+    url='https://github.com/rpkilby/AssetVendor',
     description='A simple dealer of node packages...',
     long_description=get_long_description(),
     license='BSD',
@@ -20,8 +20,9 @@ setup(
     packages=find_packages('src'),
     include_package_data=True,
     extras_require={
+        'dev': ['tox', 'tox-venv', 'ipython'],
         'packaging': ['packaging'],
-        'dev': ['tox', 'tox-venv', 'ipython']
+        'yaml': ['pyyaml'],
     },
     entry_points={
         'console_scripts': [
