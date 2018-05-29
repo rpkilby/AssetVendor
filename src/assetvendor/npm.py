@@ -124,8 +124,8 @@ class Client:
             download(Request(url), path)
 
         if not self.checksum(path, metadata.get_shasum(version)):
-            raise RuntimeError(f"The archive shasum ({path}) failed to "
-                               f"match the version checksum ({version}).")
+            raise RuntimeError(f"Checksum failure for {package}@{version}. "
+                               f"Archive and metadata shasums do not match. ")
 
         return path
 

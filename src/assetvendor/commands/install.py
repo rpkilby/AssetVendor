@@ -32,7 +32,10 @@ class Install(Command):
         # Download archives and checksum against lockfile
         for package in config.packages:
             archive = client.get_archive(package['package'], package['version'])
-            client.checksum(archive, package['shasum'])
+            if not client.checksum(archive, package['shasum']):
+                package, version = package['package'], package['version']
+                raise RuntimeError(f"Checksum failure for {package}@{version}. "
+                                   f"Archive and lockfile shasums do not match. ")
 
         # Clear existing directories in install location and untar the archives
         os.makedirs(config.location_dir, exist_ok=True)
