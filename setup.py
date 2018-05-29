@@ -10,7 +10,7 @@ def get_long_description():
 
 setup(
     name='AssetVendor',
-    version='0.0.0',
+    version='0.0.1',
     author='Ryan P Kilby',
     url='https://github.com/rpkilby/AssetVendor',
     description='A simple dealer of node packages...',
